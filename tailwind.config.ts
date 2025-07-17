@@ -12,6 +12,12 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        'bauhaus': ['Bauhaus Chez Display', 'Bauhaus 93', 'sans-serif'],
+        'dot-gothic': ['var(--font-dot-gothic)', 'monospace'],
+        'dm-sans': ['var(--font-dm-sans)', 'sans-serif'],
+        'asap': ['var(--font-asap)', 'sans-serif'],
+      },
     },
   },
   plugins: [],
