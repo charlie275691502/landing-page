@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Bauhaus";
+  src: url("../../public/fonts/BauhausChezDisplay2.0-Regular.otf");
+}
+
+@font-face {
+  font-family: "BauhausSemiBold";
+  src: url("../../public/fonts/BauhausChezDisplay2.0-SemiBold.otf");
+}
+
+@font-face {
+  font-family: "BauhausExtraBold";
+  src: url("../../public/fonts/BauhausChezDisplay2.0-ExtraBold.otf");
+}

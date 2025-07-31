@@ -1,5 +1,9 @@
 "use client";
 import hero_bubbles from "./images/hero_bubbles.png";
+import hero_bubble_small_sphere from "./images/hero_bubble_small_sphere.png";
+import hero_bubble_main_b from "./images/hero_bubble_main_b.png";
+// import hero_bubble_globe_right from "./images/hero_bubble_globe_right.png";
+// import hero_bubble_globe_left from "./images/hero_bubble_globe_left.png";
 import cable_icon from "./images/cable_icon.png";
 import earth_icon from "./images/earth_icon.png";
 import chart_icon from "./images/chart_icon.png";
@@ -9,6 +13,7 @@ import hero from "./images/hero.png";
 import union from "./images/union.png";
 import Image from "next/image";
 import { useCallback } from "react";
+import "./fonts.css";
 
 export default function Home() {
   const onBenefitsTextClick = useCallback(() => {
@@ -53,25 +58,56 @@ export default function Home() {
       <div className="w-full bg-white h-[885px] overflow-hidden flex-shrink-0 flex flex-row items-end justify-center relative max-w-[1500px] z-[3]">
         <div className="w-[1074px] h-[737px] flex flex-row items-start justify-start relative z-0">
           <div className="w-full absolute -top-[148px] right-[2px] left-[2px] h-[737px] z-0">
-            <Image
-              src={hero_bubbles}
-              alt="Hero Image"
-              fill
-              style={{ objectFit: "cover" }}
-            />
+            <div className="absolute h-[85.89%] w-[55.59%] top-[7.6%] right-[8.01%] bottom-[6.51%] left-[36.41%] rounded-full border border-dashed border-black box-border" />
+            <div className="absolute w-[15.9%] top-[197px] right-[13.81%] left-[70.29%] max-w-full overflow-hidden h-[166px] opacity-50">
+              <Image
+                src={hero_bubble_small_sphere}
+                alt="Small Sphere"
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            <div className="absolute w-[69.03%] top-0 right-[23.8%] left-[7.17%] max-w-full overflow-hidden h-[737px]">
+              <Image
+                src={hero_bubble_main_b}
+                alt="Main B"
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            {/* <div className="absolute w-[22.51%] top-[286px] right-[77.49%] left-0 max-w-full overflow-hidden h-[106px]">
+              <Image
+                src={hero_bubble_globe_left}
+                alt="Globe Left"
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            <div className="absolute w-[21.86%] top-[439px] right-0 left-[78.14%] max-w-full overflow-hidden h-[103px]">
+              <Image
+                src={hero_bubble_globe_right}
+                alt="Globe Right"
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </div> */}
           </div>
         </div>
         <div className="absolute top-[554px] left-[91px] flex flex-col items-start justify-center py-[72px] px-0 z-[1]">
           <div className="w-[876px] relative tracking-[-0.03em] leading-[105%] font-extrabold inline-block h-[137px] flex-shrink-0">
-            <p className="m-0">Frontend is Dead</p>
-            <p className="m-0">Hallucination Takes Over</p>
+            <p className="m-0" style={{ fontFamily: "BauhausExtraBold" }}>
+              Frontend is Dead
+            </p>
+            <p className="m-0" style={{ fontFamily: "BauhausExtraBold" }}>
+              Yaps Take Over
+            </p>
           </div>
           <div className="relative text-xl tracking-[0.03em] leading-[140%] font-dot-gothic">
             <p className="m-0">
-              Generic execution layer for agentic action on-chain
+              Generic execution on-chain for agentic actions
             </p>
             <p className="m-0">
-              with native blockchain clients as MCP for LLM-based UX
+              Native blockchain clients as MCPs that unlocks the LLMs
             </p>
           </div>
         </div>
@@ -80,12 +116,15 @@ export default function Home() {
       {/* Navigation */}
       <div className="w-[1200px] absolute top-0 left-10 h-[76px] flex flex-col items-center justify-start z-[4] text-[30px]">
         <div className="w-full h-[148px] flex flex-row items-center justify-between py-5 px-0 pb-20 box-border gap-0 max-w-[1500px]">
-          <div className="relative tracking-[-0.05em] leading-[120%] font-black">
-            foameo labs
+          <div
+            className="relative tracking-[-0.05em] leading-[120%] font-black"
+            style={{ fontFamily: "BauhausExtraBold" }}
+          >
+            aomi labs
           </div>
           <div className="rounded-[1000px] bg-[#d343c7] flex flex-row items-center justify-center py-[14px] px-[22px] gap-[2px] text-center text-sm text-white font-dot-gothic">
             <div className="relative tracking-[0.03em] leading-[140%]">
-              GitHub
+              GitHub ↗
             </div>
           </div>
         </div>
@@ -98,14 +137,17 @@ export default function Home() {
           data-scroll-to="headlineAndIcons"
         >
           <div className="self-stretch flex flex-col items-start justify-start pr-[400px] relative gap-[50px]">
-            <div className="w-[1200px] relative tracking-[-0.03em] leading-[100%] font-extrabold inline-block z-0">
+            <div
+              className="w-[1200px] relative tracking-[-0.03em] leading-[100%] font-extrabold inline-block z-0"
+              style={{ fontFamily: "BauhausExtraBold" }}
+            >
               Consumer Crypto & UX reinvention on Natural Language
             </div>
             <div className="w-[1123px] relative text-base tracking-[0.03em] leading-[140%] font-dot-gothic inline-block z-[1]">
               All blockchains are interoperable ledgers processing generic
               actions against their states. You should be able to talk to
               blockchains without intermediaries, skipping the frontends or
-              protocol-defined SDKs. Foameo eliminates bespoke integrations
+              protocol-defined SDKs. Aomi eliminates bespoke integrations
               between AI frameworks and on-chain apps, allowing Claude/ChatGPT
               talks to a high-performance clients directly via Model-Context
               Protocol.
@@ -128,7 +170,10 @@ export default function Home() {
                 />
               </div>
               <div className="self-stretch flex flex-col items-start justify-start gap-5">
-                <div className="self-stretch relative tracking-[-0.03em] leading-[100%]">
+                <div
+                  className="self-stretch relative tracking-[-0.03em] leading-[100%]"
+                  style={{ fontFamily: "Bauhaus" }}
+                >
                   Generalization
                 </div>
                 <div className="self-stretch relative text-sm tracking-[0.03em] leading-[140%] font-dot-gothic text-[#6f6f6f]">
@@ -150,7 +195,10 @@ export default function Home() {
                 />
               </div>
               <div className="self-stretch flex flex-col items-start justify-start gap-5">
-                <div className="self-stretch relative tracking-[-0.03em] leading-[100%]">
+                <div
+                  className="self-stretch relative tracking-[-0.03em] leading-[100%]"
+                  style={{ fontFamily: "Bauhaus" }}
+                >
                   Scalability
                 </div>
                 <div className="self-stretch relative text-sm tracking-[0.03em] leading-[140%] font-dot-gothic text-[#6f6f6f]">
@@ -172,7 +220,10 @@ export default function Home() {
                 />
               </div>
               <div className="w-[225px] flex flex-col items-start justify-start gap-5">
-                <div className="self-stretch relative tracking-[-0.03em] leading-[100%]">
+                <div
+                  className="self-stretch relative tracking-[-0.03em] leading-[100%]"
+                  style={{ fontFamily: "Bauhaus" }}
+                >
                   Performance
                 </div>
                 <div className="self-stretch relative text-sm tracking-[0.03em] leading-[140%] font-dot-gothic text-[#6f6f6f]">
@@ -193,7 +244,10 @@ export default function Home() {
                 />
               </div>
               <div className="self-stretch flex flex-col items-start justify-start gap-5">
-                <div className="self-stretch relative tracking-[-0.03em] leading-[100%]">
+                <div
+                  className="self-stretch relative tracking-[-0.03em] leading-[100%]"
+                  style={{ fontFamily: "Bauhaus" }}
+                >
                   Security
                 </div>
                 <div className="self-stretch relative text-sm tracking-[0.03em] leading-[140%] font-dot-gothic text-[#6f6f6f] whitespace-pre-wrap">
@@ -218,7 +272,10 @@ export default function Home() {
       <div className="w-full h-[831px] flex flex-row items-start justify-start pb-[120px] box-border gap-5 max-w-[1500px] z-[7]">
         <div className="self-stretch flex-1 border-t border-solid border-[#e9e9e9] flex flex-col items-start justify-start pt-[60px] px-0 pb-20 gap-10">
           <div className="self-stretch flex flex-col items-start justify-start pr-20 gap-10">
-            <div className="self-stretch relative tracking-[-0.03em] leading-[100%] font-extrabold">
+            <div
+              className="self-stretch relative tracking-[-0.03em] leading-[100%] font-extrabold"
+              style={{ fontFamily: "BauhausExtraBold" }}
+            >
               Service Model for Order Flow
             </div>
             <div className="w-[510px] relative text-sm tracking-[0.03em] leading-[140%] font-dot-gothic text-[#6f6f6f] inline-block">
@@ -234,7 +291,7 @@ export default function Home() {
             <div className="self-stretch border-t border-solid border-[#e9e9e9] flex flex-row items-start justify-center py-5 pr-20 pl-0 gap-[30px]">
               <b className="relative leading-[140%] text-black">01</b>
               <div className="flex-1 relative leading-[140%] text-black">
-                Foameo offers frontend-as-a-service to Web3 ecosystem.
+                Aomi offers frontend-as-a-service to Web3 ecosystem.
               </div>
             </div>
             <div className="self-stretch border-t border-solid border-[#e9e9e9] flex flex-row items-start justify-center py-5 pr-20 pl-0 gap-[30px]">
@@ -279,12 +336,15 @@ export default function Home() {
         data-scroll-to="howItWorksSection"
       >
         <div className="self-stretch flex flex-row items-start justify-between gap-0">
-          <div className="relative tracking-[-0.03em] leading-[90%] font-semibold">
+          <div
+            className="relative tracking-[-0.03em] leading-[90%]"
+            style={{ fontFamily: "BauhausSemiBold" }}
+          >
             Hear our voice
           </div>
           <div className="rounded-[1000px] bg-[#d343c7] flex flex-row items-center justify-center py-[14px] px-[22px] gap-[2px] text-sm text-white font-dot-gothic">
             <div className="relative tracking-[0.03em] leading-[140%]">
-              Blog
+              Blog ↗
             </div>
           </div>
         </div>
@@ -295,11 +355,15 @@ export default function Home() {
               01
             </div>
             <div className="self-stretch flex flex-col items-start justify-start gap-5 text-lg text-black font-bauhaus">
-              <div className="self-stretch relative tracking-[-0.03em] leading-[100%]">
-                Get Started
+              <div
+                className="self-stretch relative tracking-[-0.03em] leading-[100%]"
+                style={{ fontFamily: "Bauhaus" }}
+              >
+                Integration
               </div>
               <div className="self-stretch relative text-[15px] leading-[140%] font-asap text-[#6f6f6f]">
-                With our intuitive setup, you're up and running in minutes.
+                Integrate our frontend component to wallets, applications,
+                internal dashboard with zero fees.
               </div>
             </div>
           </div>
@@ -309,11 +373,15 @@ export default function Home() {
               02
             </div>
             <div className="self-stretch flex flex-col items-start justify-start gap-5 text-lg text-black font-bauhaus">
-              <div className="self-stretch relative tracking-[-0.03em] leading-[100%]">
-                Customize and Configure
+              <div
+                className="self-stretch relative tracking-[-0.03em] leading-[100%]"
+                style={{ fontFamily: "Bauhaus" }}
+              >
+                Customization
               </div>
               <div className="self-stretch relative text-[15px] leading-[140%] font-asap text-[#6f6f6f]">
-                Adapt Area to your specific requirements and preferences.
+                Customized our AI solutions with context, prompts, and UI based
+                on what you need.
               </div>
             </div>
           </div>
@@ -323,11 +391,15 @@ export default function Home() {
               03
             </div>
             <div className="self-stretch flex flex-col items-start justify-start gap-5 text-lg text-black font-bauhaus">
-              <div className="self-stretch relative tracking-[-0.03em] leading-[100%]">
-                Grow Your Business
+              <div
+                className="self-stretch relative tracking-[-0.03em] leading-[100%]"
+                style={{ fontFamily: "Bauhaus" }}
+              >
+                Transact
               </div>
               <div className="self-stretch relative text-[15px] leading-[140%] font-asap text-[#6f6f6f]">
-                Make informed decisions to exceed your goals.
+                Prompt your users about on-chain activities and
+                ecosystem-supported apps, execute their intent.
               </div>
             </div>
           </div>
@@ -343,7 +415,10 @@ export default function Home() {
         className="w-full border-t-[0.5px] border-solid border-[#e9e9e9] box-border flex flex-col items-center justify-start py-[120px] px-[300px] gap-10 max-w-[1500px] z-[11] text-center text-[60px]"
         data-scroll-to="centeredCTAContainer"
       >
-        <div className="self-stretch relative tracking-[-0.03em] leading-[90%] font-semibold">
+        <div
+          className="self-stretch relative tracking-[-0.03em] leading-[90%]"
+          style={{ fontFamily: "BauhausSemiBold" }}
+        >
           Connect with us
         </div>
         <div className="self-stretch relative text-[15px] leading-[140%] font-asap text-[#6f6f6f]">
@@ -351,7 +426,7 @@ export default function Home() {
         </div>
         <div className="rounded-[1000px] bg-[#d343c7] flex flex-row items-center justify-center py-[14px] px-[22px] gap-[2px] text-sm text-white font-dot-gothic">
           <div className="relative tracking-[0.03em] leading-[140%]">
-            Contact Us
+            Contact Us ↗
           </div>
         </div>
       </div>
