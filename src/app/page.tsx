@@ -14,6 +14,7 @@ import union from "./images/union.png";
 import Image from "next/image";
 import { useCallback } from "react";
 import "./fonts.css";
+import "./page.css";
 
 export default function Home() {
   const onBenefitsTextClick = useCallback(() => {
@@ -136,6 +137,9 @@ export default function Home() {
           className="self-stretch filter drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] border-t-[0.5px] border-solid border-[#e9e9e9] flex flex-col items-start justify-start pt-20 px-0 pb-[60px] gap-[50px]"
           data-scroll-to="headlineAndIcons"
         >
+          <div className="w-[576px] relative top-0 left-[calc(50%-288px)] text-xs tracking-[-0.01em] leading-[140%] font-asap text-[#d343c7] text-center inline-block z-[2]">
+            Mission
+          </div>
           <div className="self-stretch flex flex-col items-start justify-start pr-[400px] relative gap-[50px]">
             <div
               className="w-[1200px] relative tracking-[-0.03em] leading-[100%] font-extrabold inline-block z-0"
@@ -151,9 +155,6 @@ export default function Home() {
               between AI frameworks and on-chain apps, allowing Claude/ChatGPT
               talks to a high-performance clients directly via Model-Context
               Protocol.
-            </div>
-            <div className="w-[576px] absolute top-0 left-[calc(50%-288px)] text-xs tracking-[-0.01em] leading-[140%] font-asap text-[#d343c7] text-center inline-block z-[2]">
-              Mission
             </div>
           </div>
 
@@ -407,7 +408,17 @@ export default function Home() {
       </div>
 
       <div className="self-stretch flex flex-row items-start justify-between gap-0">
-        <Image src={hero} alt="hero" />
+        {/* <Image src={hero} alt="hero" />
+         */}
+        <div className="hero-image-container">
+          <div className="hero-ellipse-5" />
+          <div className="hero-ellipse-6" />
+          <div className="hero-ellipse-7" />
+          <div className="hero-line-4" />
+          <div className="hero-4-9">
+            <div className="hero-13-3" />
+          </div>
+        </div>
       </div>
 
       {/* CTA Section */}
