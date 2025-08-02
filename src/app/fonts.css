@@ -9,6 +9,11 @@
 }
 
 @font-face {
+  font-family: "BauhausBold";
+  src: url("../../public/fonts/BauhausChezDisplay2.0-Bold.otf");
+}
+
+@font-face {
   font-family: "BauhausExtraBold";
   src: url("../../public/fonts/BauhausChezDisplay2.0-ExtraBold.otf");
 }

@@ -331,6 +331,58 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Market Section */}
+      <div className="w-full flex flex-col items-center justify-start pb-[120px] box-border max-w-[1500px] z-[6]">
+        <div
+          className="self-stretch filter drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] border-t-[0.5px] border-solid border-[#e9e9e9] flex flex-col items-start justify-start pt-20 px-0 pb-[60px] gap-[50px]"
+          data-scroll-to="headlineAndIcons"
+        >
+          <div className="w-[576px] relative top-0 left-[calc(50%-288px)] text-xs tracking-[-0.01em] leading-[140%] font-asap text-[#d343c7] text-center inline-block z-[2]">
+            Market
+          </div>
+          <div
+            className="max-w-[800px] mx-auto relative tracking-[-0.03em] leading-[100%] inline-block z-0 BauhausBold text-center"
+            style={{ fontFamily: "BauhausBold" }}
+          >
+            Frictionless Integration for Distribution
+          </div>
+          <div className="max-w-[800px] mx-auto relative text-base tracking-[0.03em] leading-[140%] font-dot-gothic inline-block z-[1] text-center">
+            Our zero-cost services aims to capture maximum order flow. We takes
+            fees from transactions with PMF. Aomi devotes to craft seamless
+            consumer experience that converts to distribution.
+          </div>
+        </div>
+      </div>
+
+      {/* Technology Section */}
+      <div className="w-full flex flex-col items-center justify-start pb-[120px] box-border max-w-[1500px] z-[6]">
+        <div
+          className="self-stretch filter drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] border-t-[0.5px] border-solid border-[#e9e9e9] flex flex-col items-start justify-start pt-20 px-0 pb-[60px] gap-[50px]"
+          data-scroll-to="headlineAndIcons"
+        >
+          <div className="w-[576px] relative top-0 left-[calc(50%-288px)] text-xs tracking-[-0.01em] leading-[140%] font-asap text-[#d343c7] text-center inline-block z-[2]">
+            Technology
+          </div>
+          <div className="self-stretch flex flex-col items-start justify-start pr-[400px] relative gap-[50px]">
+            <div
+              className="w-[1200px] relative tracking-[-0.03em] leading-[100%] inline-block z-0 BauhausBold text-center"
+              style={{ fontFamily: "BauhausBold" }}
+            >
+              Where We Stand
+            </div>
+            <div className="w-[1123px] relative text-base tracking-[0.03em] leading-[140%] font-dot-gothic inline-block z-[1]">
+              All blockchains are interoperable ledgers processing generic
+              actions against their states. You should be able to talk to
+              blockchains without intermediaries, skipping the frontends or
+              protocol-defined SDKs. Aomi eliminates bespoke integrations
+              between AI frameworks and on-chain apps, allowing Claude/ChatGPT
+              talks to a high-performance clients directly via Model-Context
+              Protocol.
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* How It Works Section */}
       <div
         className="w-full border-t border-solid border-[#e9e9e9] box-border flex flex-col items-start justify-start py-20 px-0 pb-[120px] gap-20 max-w-[1500px] z-[9] text-center text-[60px]"
