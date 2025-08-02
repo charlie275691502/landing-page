@@ -106,3 +106,78 @@
   flex-grow: 0;
   z-index: 5;
 }
+
+.tech-diagram {
+  position: relative;
+  width: 1300px;
+  height: 1000px;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-image-container {
+  position: absolute;
+  width: 60%;
+  height: auto;
+  aspect-ratio: 1138 / 1163;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-label {
+  position: absolute;
+  width: 180px;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.tech-label h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  font-family: "BauhausBold";
+}
+
+.tech-autonomy {
+  top: 10%;
+  left: 5%;
+  text-align: right;
+}
+
+.tech-collaboration {
+  top: 10%;
+  right: 5%;
+}
+
+.tech-capability {
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.tech-where-we-stand {
+  position: absolute;
+  bottom: 8%;
+  right: 4%;
+  width: 400px;
+}
+
+.tech-where-we-stand-title {
+  position: relative;
+  width: 400px;
+  font-size: 30px;
+  line-height: 1.4;
+  text-align: left;
+  font-family: "BauhausExtraBold";
+}
+
+.tech-where-we-stand-text {
+  position: relative;
+  width: 200px;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: left;
+}

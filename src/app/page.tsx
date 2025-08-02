@@ -11,6 +11,7 @@ import account_icon from "./images/account_icon.png";
 import carousel from "./images/carousel.png";
 import hero from "./images/hero.png";
 import union from "./images/union.png";
+import technology from "./images/technology.png";
 import Image from "next/image";
 import { useCallback } from "react";
 import "./fonts.css";
@@ -318,7 +319,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-[1000px] bg-[#ecc6ec] flex flex-col items-center justify-center py-[14px] px-[22px] text-center text-sm font-dot-gothic">
+          <div className="rounded-[1000px] bg-[#ecc6ec] flex flex-col items-center justify-center py-[14px] px-[22px] text-center text-sm font-dot-gothic mx-auto">
             <div className="relative tracking-[0.03em] leading-[140%]">
               Discover More
             </div>
@@ -351,6 +352,11 @@ export default function Home() {
             fees from transactions with PMF. Aomi devotes to craft seamless
             consumer experience that converts to distribution.
           </div>
+          <div className="rounded-[1000px] bg-[#ecc6ec] flex flex-col items-center justify-center py-[14px] px-[22px] text-center text-sm font-dot-gothic mx-auto">
+            <div className="relative tracking-[0.03em] leading-[140%]">
+              Discover More
+            </div>
+          </div>
         </div>
       </div>
 
@@ -363,21 +369,33 @@ export default function Home() {
           <div className="w-[576px] relative top-0 left-[calc(50%-288px)] text-xs tracking-[-0.01em] leading-[140%] font-asap text-[#d343c7] text-center inline-block z-[2]">
             Technology
           </div>
-          <div className="self-stretch flex flex-col items-start justify-start pr-[400px] relative gap-[50px]">
-            <div
-              className="w-[1200px] relative tracking-[-0.03em] leading-[100%] inline-block z-0 BauhausBold text-center"
-              style={{ fontFamily: "BauhausBold" }}
-            >
-              Where We Stand
+          <div className="tech-diagram">
+            <div className="tech-image-container">
+              <Image src={technology} alt="technology" />
             </div>
-            <div className="w-[1123px] relative text-base tracking-[0.03em] leading-[140%] font-dot-gothic inline-block z-[1]">
-              All blockchains are interoperable ledgers processing generic
-              actions against their states. You should be able to talk to
-              blockchains without intermediaries, skipping the frontends or
-              protocol-defined SDKs. Aomi eliminates bespoke integrations
-              between AI frameworks and on-chain apps, allowing Claude/ChatGPT
-              talks to a high-performance clients directly via Model-Context
-              Protocol.
+            {/* Labels */}
+            <div className="tech-label tech-autonomy">
+              <h3>Autonomy</h3>
+              <p>
+                Depth and continuity of an agent’s ability to perform a task
+                asynchronously and independently
+              </p>
+            </div>
+            <div className="tech-label tech-collaboration">
+              <h3>Collaboration</h3>
+              <p>
+                Degree of agent coordination, specialization, and emergent
+                behavior in multi-agent swarm
+              </p>
+            </div>
+            <div className="tech-label tech-capability">
+              <h3>Capability</h3>
+            </div>
+            <div className="tech-where-we-stand">
+              <h3 className="tech-where-we-stand-title">Where We Stand</h3>
+              <p className="tech-where-we-stand-text">
+                Breadth of on-chain tasks AI can perform arbitrarily
+              </p>
             </div>
           </div>
         </div>
