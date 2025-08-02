@@ -143,13 +143,13 @@
 
 .tech-autonomy {
   top: 10%;
-  left: 5%;
+  left: 4%;
   text-align: right;
 }
 
 .tech-collaboration {
   top: 10%;
-  right: 5%;
+  right: 4%;
 }
 
 .tech-capability {
@@ -180,4 +180,53 @@
   font-size: 14px;
   line-height: 1.4;
   text-align: left;
+}
+
+.tech-lines {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 1200px;
+  overflow: visible;
+}
+
+.anim-line {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: drawLine 1s forwards;
+}
+
+.anim-line:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.anim-line:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+.line-square {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 0.35s;
+}
+
+.line-square:nth-child(4) {
+  animation-delay: 0.65s;
+}
+
+.line-square:nth-child(6) {
+  animation-delay: 0.95s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
 }

@@ -13,7 +13,7 @@ import hero from "./images/hero.png";
 import union from "./images/union.png";
 import technology from "./images/technology.png";
 import Image from "next/image";
-import { useCallback } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import "./fonts.css";
 import "./page.css";
 
@@ -53,6 +53,31 @@ export default function Home() {
       anchor.scrollIntoView({ block: "start", behavior: "smooth" });
     }
   }, []);
+
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setInView(true);
+            observer.disconnect(); // Trigger only once
+          }
+        });
+      },
+      { threshold: 0.3 } // Trigger when 30% of the section is visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  console.log("In view:", inView);
 
   return (
     <div className="w-full relative bg-white overflow-auto flex flex-col items-center justify-start px-10 pb-5 box-border text-left text-6xl text-black font-bauhaus">
@@ -361,7 +386,10 @@ export default function Home() {
       </div>
 
       {/* Technology Section */}
-      <div className="w-full flex flex-col items-center justify-start pb-[120px] box-border max-w-[1500px] z-[6]">
+      <div
+        ref={sectionRef}
+        className="w-full flex flex-col items-center justify-start pb-[120px] box-border max-w-[1500px] z-[6]"
+      >
         <div
           className="self-stretch filter drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] border-t-[0.5px] border-solid border-[#e9e9e9] flex flex-col items-start justify-start pt-20 px-0 pb-[60px] gap-[50px]"
           data-scroll-to="headlineAndIcons"
@@ -373,6 +401,63 @@ export default function Home() {
             <div className="tech-image-container">
               <Image src={technology} alt="technology" />
             </div>
+            <svg className="tech-lines" viewBox="0 0 600 600">
+              {inView && (
+                <>
+                  <line
+                    x1="300"
+                    y1="260"
+                    x2="100"
+                    y2="110"
+                    stroke="black"
+                    strokeWidth="1"
+                    className="anim-line"
+                  />
+                  <rect
+                    x={100 - 3}
+                    y={110 - 3}
+                    width="6"
+                    height="6"
+                    fill="black"
+                    className="line-square"
+                  />
+                  <line
+                    x1="300"
+                    y1="260"
+                    x2="500"
+                    y2="110"
+                    stroke="black"
+                    strokeWidth="1"
+                    className="anim-line"
+                  />
+                  <rect
+                    x={500 - 3}
+                    y={110 - 3}
+                    width="6"
+                    height="6"
+                    fill="black"
+                    className="line-square"
+                  />
+                  <line
+                    x1="300"
+                    y1="260"
+                    x2="300"
+                    y2="500"
+                    stroke="black"
+                    strokeWidth="1"
+                    className="anim-line"
+                  />
+                  <rect
+                    x={300 - 3}
+                    y={500 - 3}
+                    width="6"
+                    height="6"
+                    fill="black"
+                    className="line-square"
+                  />
+                </>
+              )}
+            </svg>
             {/* Labels */}
             <div className="tech-label tech-autonomy">
               <h3>Autonomy</h3>
