@@ -2,8 +2,8 @@
 import hero_bubbles from "./images/hero_bubbles.png";
 import hero_bubble_small_sphere from "./images/hero_bubble_small_sphere.png";
 import hero_bubble_main_b from "./images/hero_bubble_main_b.png";
-// import hero_bubble_globe_right from "./images/hero_bubble_globe_right.png";
-// import hero_bubble_globe_left from "./images/hero_bubble_globe_left.png";
+import hero_bubble_globe_right from "./images/hero_bubble_globe_right.png";
+import hero_bubble_globe_left from "./images/hero_bubble_globe_left.png";
 import cable_icon from "./images/cable_icon.png";
 import earth_icon from "./images/earth_icon.png";
 import chart_icon from "./images/chart_icon.png";
@@ -102,7 +102,7 @@ export default function Home() {
                 style={{ objectFit: "cover" }}
               />
             </div>
-            {/* <div className="absolute w-[22.51%] top-[286px] right-[77.49%] left-0 max-w-full overflow-hidden h-[106px]">
+            <div className="absolute w-[22.51%] top-[286px] right-[77.49%] left-0 max-w-full overflow-hidden h-[106px]">
               <Image
                 src={hero_bubble_globe_left}
                 alt="Globe Left"
@@ -117,7 +117,7 @@ export default function Home() {
                 fill
                 style={{ objectFit: "cover" }}
               />
-            </div> */}
+            </div>
           </div>
         </div>
         <div className="absolute top-[554px] left-[91px] flex flex-col items-start justify-center py-[72px] px-0 z-[1]">
@@ -562,9 +562,8 @@ export default function Home() {
       </div>
 
       <div className="self-stretch flex flex-row items-start justify-between gap-0">
-        {/* <Image src={hero} alt="hero" />
-         */}
-        <div className="hero-image-container">
+        <Image src={hero} alt="hero" />
+        {/* <div className="hero-image-container">
           <div className="hero-ellipse-5" />
           <div className="hero-ellipse-6" />
           <div className="hero-ellipse-7" />
@@ -572,7 +571,7 @@ export default function Home() {
           <div className="hero-4-9">
             <div className="hero-13-3" />
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* CTA Section */}
