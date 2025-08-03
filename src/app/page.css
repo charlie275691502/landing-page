@@ -75,20 +75,23 @@
 
 .hero-4-9 {
   position: absolute;
-  width: 865.75px;
-  height: 865.75px;
-  left: 16%;
-  top: 75%;
-  background: url("./images/hero_4.png");
+  width: 1200px;
+  aspect-ratio: 4844 / 5228;
+  left: 50%;
+  top: 50%;
+  background: url("./images/hero_4.svg");
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 67px;
-  transform: rotate(42.96deg) translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   overflow: hidden;
-  flex: none;
-  order: 4;
-  flex-grow: 0;
   z-index: 4;
+
+  /* Key: mask to enforce border clipping */
+  -webkit-mask-image: radial-gradient(circle, white 100%, transparent 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: cover;
 }
 
 .hero-13-3 {
@@ -102,8 +105,6 @@
   background-repeat: no-repeat;
   transform: translate(-50%, -50%) rotate(-40deg);
   opacity: 0.7;
-  order: 5;
-  flex-grow: 0;
   z-index: 5;
 }
 
@@ -111,6 +112,8 @@
   position: relative;
   width: 1300px;
   height: 1000px;
+  left: 50%;
+  transform: translateX(-50%);
   top: 0;
   display: flex;
   justify-content: center;

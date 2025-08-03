@@ -11,7 +11,7 @@ import account_icon from "./images/account_icon.png";
 import carousel from "./images/carousel.png";
 import hero from "./images/hero.png";
 import union from "./images/union.png";
-import technology from "./images/technology.png";
+import technology from "./images/technology1.png";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import "./fonts.css";
@@ -166,7 +166,7 @@ export default function Home() {
           <div className="w-[576px] relative top-0 left-[calc(50%-288px)] text-xs tracking-[-0.01em] leading-[140%] font-asap text-[#d343c7] text-center inline-block z-[2]">
             Mission
           </div>
-          <div className="self-stretch flex flex-col items-start justify-start pr-[400px] relative gap-[50px]">
+          <div className="self-stretch flex flex-col  items-start justify-start pr-[400px] relative gap-[50px]">
             <div
               className="w-[1200px] relative tracking-[-0.03em] leading-[100%] font-extrabold inline-block z-0"
               style={{ fontFamily: "BauhausExtraBold" }}
@@ -296,7 +296,7 @@ export default function Home() {
       </div>
 
       {/* Features Carousel */}
-      <div className="w-full h-[831px] flex flex-row items-start justify-start pb-[120px] box-border gap-5 max-w-[1500px] z-[7]">
+      <div className="w-full h-[831px] flex flex-row items-start justify-start pb-[120px] box-border gap-5 w-[90%] z-[7]">
         <div className="self-stretch flex-1 border-t border-solid border-[#e9e9e9] flex flex-col items-start justify-start pt-[60px] px-0 pb-20 gap-10">
           <div className="self-stretch flex flex-col items-start justify-start pr-20 gap-10">
             <div
@@ -343,8 +343,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          <div className="rounded-[1000px] bg-[#ecc6ec] flex flex-col items-center justify-center py-[14px] px-[22px] text-center text-sm font-dot-gothic mx-auto">
+          <div className="rounded-[1000px] bg-[#ecc6ec] flex flex-col items-center justify-center py-[14px] px-[22px] text-center text-sm font-dot-gothic">
             <div className="relative tracking-[0.03em] leading-[140%]">
               Discover More
             </div>
@@ -352,7 +351,7 @@ export default function Home() {
         </div>
 
         {/* Features Carousel Image */}
-        <div className="self-stretch flex-1 flex flex-col items-start justify-center max-w-[1600px]">
+        <div className="self-stretch flex-1 flex flex-col items-start justify-center max-w-[500px]">
           <Image src={carousel} alt="carousel" />
         </div>
       </div>
